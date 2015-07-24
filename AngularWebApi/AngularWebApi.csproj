@@ -151,6 +151,9 @@
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\app\ngprogress-lite.css" />
+    <Content Include="Scripts\app\ngprogress-lite.js" />
+    <Content Include="Scripts\app\ngprogress-lite.min.js" />
     <Content Include="Scripts\app\productList-controller.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

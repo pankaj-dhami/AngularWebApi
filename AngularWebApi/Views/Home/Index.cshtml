@@ -40,10 +40,12 @@
             <input type="text" ng-model="productCode" />
             <input type="text" ng-model="productPrice" />
             <input type="button" ng-click="postFormData()" value="create new" />
-
+            <div id="progressbar"></div>
         </div>
     </div>
 </div>
 
 <script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/app/ngprogress-lite.js"></script>
+<link href="~/Scripts/app/ngprogress-lite.css" rel="stylesheet" />
 <script src="~/Scripts/app/productList-controller.js"></script>

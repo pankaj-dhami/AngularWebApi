@@ -1,0 +1,49 @@
+﻿
+<div ng-app="myApp" ng-controller="myCtrl">
+    <br>
+    {{ myName }}
+    Full Name: {{firstName + " " + lastName}}
+
+
+
+    <div ng-controller="productsCtrl">
+
+        <div ng-hide="myVar" class="panel-body">
+            <table class="table">
+
+                <thead>
+                    <tr>
+                        <td>Product</td>
+                        <td>Code</td>
+                        <td>Available</td>
+                        <td>Price</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="product in products">
+                        <td>{{ product.productName}}</td>
+                        <td>{{ product.productCode }}</td>
+                        <td>{{ product.releaseDate | date }}</td>
+                        <td>{{ product.price | currency }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <input type="checkbox" ng-model="btnState" value="enable button" />
+            <input type="button" ng-disabled="btnState" value="button" />
+            <p ng-show="btnState">I am visible.</p>
+            <input type="button" ng-click="toggle()" value="toggle show" />
+            {{ btnState }}
+            <input type="text" ng-model="productName" />
+            <input type="text" ng-model="productCode" />
+            <input type="text" ng-model="productPrice" />
+            <input type="button" ng-click="postFormData()" value="create new" />
+
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/app/productList-controller.js"></script>

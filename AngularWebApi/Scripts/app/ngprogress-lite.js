@@ -32,7 +32,7 @@
 		};
 
 		this.$get = ['$document', function ($document) {
-		    var $body = $document.find('#progressbar');
+		    var $body = $document.find('body');
 			var $progressBarEl, status, cleanForElement;
 
 			var privateMethods = {

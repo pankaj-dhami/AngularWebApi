@@ -1,51 +1,26 @@
-﻿
-<div ng-app="myApp" ng-controller="myCtrl">
-    <br>
-    {{ myName }}
-    Full Name: {{firstName + " " + lastName}}
+﻿<html ng-app="AngularApp">
+<head>
+    <title>Angular demo</title>
+
+</head>
 
 
+<body>
+    <div id="progressbar"></div>
+    <h1>Github Viewer</h1>
+    <div ng-view ></div>
+</body>
 
-    <div ng-controller="productsCtrl">
 
-        <div ng-hide="myVar" class="panel-body">
-            <table class="table">
+</html>
 
-                <thead>
-                    <tr>
-                        <td>Product</td>
-                        <td>Code</td>
-                        <td>Available</td>
-                        <td>Price</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="product in products">
-                        <td>{{ product.productName}}</td>
-                        <td>{{ product.productCode }}</td>
-                        <td>{{ product.releaseDate | date }}</td>
-                        <td>{{ product.price | currency }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div>
-            <input type="checkbox" ng-model="btnState" value="enable button" />
-            <input type="button" ng-disabled="btnState" value="button" />
-            <p ng-show="btnState">I am visible.</p>
-            <input type="button" ng-click="toggle()" value="toggle show" />
-            {{ btnState }}
-            <input type="text" ng-model="productName" />
-            <input type="text" ng-model="productCode" />
-            <input type="text" ng-model="productPrice" />
-            <input type="button" ng-click="postFormData()" value="create new" />
-            <div id="progressbar"></div>
-        </div>
-    </div>
-</div>
 
 <script src="~/Scripts/angular.min.js"></script>
+<script src="https://code.angularjs.org/1.2.4/angular-route.js"></script>
 <script src="~/Scripts/app/ngprogress-lite.js"></script>
 <link href="~/Scripts/app/ngprogress-lite.css" rel="stylesheet" />
-<script src="~/Scripts/app/productList-controller.js"></script>
+<script src="~/Scripts/app/app.js"></script>
+<script src="~/Scripts/app/MainController.js"></script>
+@*<script src="~/Scripts/app/productList-controller.js"></script>*@
+<script src="~/Scripts/app/service.js"></script>
+<a href="~/Views/Home/Index.cshtml">~/Views/Home/Index.cshtml</a>
